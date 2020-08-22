@@ -1,0 +1,44 @@
+<h1 class="display-4">Car Parts</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Part Id</th>
+      <th>Part Name</th>
+      <th>Stock Needed</th>
+      <th>Stock Available</th>
+      <th>Order Serving Capacity</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% data05.forEach(function(x){ %>
+    <tr>
+      <td><%= x.partId05 %></td>
+      <td><%= x.partName05 %></td>
+      <td><%= x.qty05 %></td>
+      <td><%= x.qoh05 %></td>
+      <td><%= x.capacity05 %></td>
+      <td>
+        <!-- <a
+          href="/partsOrder/<%= x.jobName05 %>/<%= x.partId05 %>/<%= x.partName05 %>/<%= x.qty05 %>/<%= x.capacity05 %>"
+          class="btn btn-primary"
+          >Order</a
+        > -->
+        <%if(x.order){%>
+        <a
+          href="/partsOrder/<%= x.jobName05 %>/<%= x.partId05 %>/<%= x.partName05 %>/<%= x.qty05 %>/<%= x.capacity05 %>"
+          class="btn btn-primary"
+          >Order</a
+        >
+        <%}%> <%if(!x.order){%>
+        <a
+          href="/partsQohIncrease/<%= x.jobName05 %>/<%= x.partId05 %>/<%= x.partName05 %>/<%= x.qty05 %>/<%= x.capacity05 %>"
+          class="btn btn-primary"
+          >Increase Stock Request</a
+        >
+        <%}%>
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>

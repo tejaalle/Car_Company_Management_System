@@ -1,0 +1,22 @@
+
+<h1 class='display-4'>Update Cars</h1>
+<form method="POST" action="/jobs/editedList">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Car Name</th>
+                <th>Car Part Id</th>
+                <th>Required Qty05</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <td><input type="text" name="jobName05" value = "<%=job05.jobName05%>" disabled></input></td>
+            <td><input type="number" name="partId05" value = "<%=job05.partId05%>" disabled></input></td>
+            <td><input type="number" name="qty05" min="1" max="10000" required></input></td>
+            <td><input type="hidden" name="jobName05" value = "<%=job05.jobName05%>" ></input></td>
+            <td><input type="hidden" name="partId05" value = "<%=job05.partId05%>" ></input></td>
+        </tbody>
+        </table>
+        <input type="submit" value="submit" class="btn btn-primary">
+</form>

@@ -1,0 +1,11 @@
+<body>
+    <h1> Update available stock for the part </h1>
+    <form action="/updatData" method="POST">
+    <input type="hidden", name ="partId05", value="<%=parts05[0].partId05%>"/>
+    <input type="hidden" name ="partName05", value="<%=parts05[0].partName05%>"/>
+    <input type="text", name ="partId05", value="<%=parts05[0].partId05%>", disabled/>
+    <input type="text" name ="partName05", value="<%=parts05[0].partName05%>", disabled/>
+    <input type="number", min="1", name="qoh05", placeholder="Enter Updated Stock", required/>
+    <button> Submit </button>
+    </form>
+   <br>

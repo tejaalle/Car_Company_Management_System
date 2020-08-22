@@ -1,0 +1,24 @@
+<h1 class="display-4">Cars</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Car Name</th>
+            <th>Car Part Id</th>
+            <th>User Id</th>
+            <th>transaction Id</th>
+            <th>Required Qty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% jobs.forEach(function(job){%>
+            <tr>
+                <td><%=job.jobName05%></td>
+                <td><%=job.partId05%></td>
+                <td><%=job.userId05%></td>
+                <td><%=job.transactionId05%></td>
+                <td><%=job.qty%></td>
+            </tr>
+
+       <% })%>
+    </tbody>
+</table>

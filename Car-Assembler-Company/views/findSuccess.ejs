@@ -1,0 +1,19 @@
+<ol class="breadcrumb">
+    <%if(exists){%>
+        <label class="error text-danger">"Job with given  UserId does not exists"</label>
+        <%}%>
+</ol>
+<h1 class='display-4'>Find Success Job By UserId</h1>
+<form method="POST" action="/jobs/userJob">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>UserId05</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td><input type="number" min="1" name="userId05" required></input></td>
+        </tbody>
+        </table>
+        <input type="submit" value="submit" class="btn btn-primary">
+</form>

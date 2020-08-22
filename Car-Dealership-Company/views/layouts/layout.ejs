@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Sails App</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <%/* If you want to discourage search engines from indexing this site,
+    uncomment the following line: */%> <%/*
+    <meta name="robots" content="noindex" />
+    */%>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css" />
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-sm navbar-dark mb-4"
+      style="background-color: #283e4a;"
+    >
+      <a class="navbar-brand" href="/">Car Dealership Co</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/viewData05">Select Car Name</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/jobSearchPage05">Search Car Name</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/displayResults">Transaction Details</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div
+      class="container"
+      style="align-items: center; text-align: center; padding: 50px;"
+    >
+      <%- body %>
+    </div>
+
+    <!--SCRIPTS-->
+    <script src="/dependencies/sails.io.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

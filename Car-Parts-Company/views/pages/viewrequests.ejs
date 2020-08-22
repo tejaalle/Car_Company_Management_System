@@ -1,0 +1,36 @@
+<body>
+<h3>Requests to increase available stock </h3>
+<br>
+<table class="table table-striped">
+<thead>
+<tr>
+<th> User Id </th>
+<th> Car Part Id </th>
+<th> Requested Stock </th>
+</tr>
+</thead>
+<tbody>
+<% parts05.forEach(function(part){ %>
+<tr>
+<td> <%= part.userId05%> </td>
+<td> <%= part.partId05%> </td>
+<td> <%= part.qoh05 %> </td>
+<td>
+    <form class="d-inline" action="/updateQoh" method="POST">
+        <input type="hidden" name="partId05" value="<%= part.partId05 %>"></input>
+        <input type="hidden" name="qoh05" value="<%= part.qoh05 %>"></input>
+        <input type="submit" value="Accept Request" class="btn btn-primary">
+    </form>
+</td>
+<td>
+    <form class="d-inline" action="/declineUpdateQoh" method="POST">
+        <input type="hidden" name="partId05" value="<%= part.partId05 %>"></input>
+        <input type="submit" value="Stock Unavailable/Decline" class="btn btn-primary">
+    </form>
+</td>
+</tr>
+<% }) %>
+</tbody>
+</table>
+</body>
+<br>

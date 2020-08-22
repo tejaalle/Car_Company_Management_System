@@ -1,0 +1,22 @@
+<h1>Verify</h1>
+<form action="/verify" method="POST">
+
+  
+    <label for="email">email</label>
+    <input name="email" type="text" value="<%=email %>" readonly="readonly"/>
+    <br/>
+  
+    <label for="password">Password</label>
+    <input name="password" type="password" value="<%=password %>" readonly="readonly"/>
+    <br/>
+
+    <label for="otp">What's your secret code?</label>
+    <input name="otp" type="text"/>
+    <br/>
+    
+    <%=message %>
+
+    <input type="submit" value="submit"/>
+    <a href="/logout">Log out</a>
+  </form>
+  

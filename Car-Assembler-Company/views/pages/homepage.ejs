@@ -1,0 +1,26 @@
+
+  
+    <% if (req.session.me) { %>
+   
+    
+
+
+
+
+<h1 class="display-4">Welcome to Cars portal</h1>
+<p class="mb-4"> You can add and edits number of car parts required for a Car here</p>
+<a href="/jobs/list"  class="btn btn-light">View Cars</a>
+<a href="/jobs/add" class="btn btn-light">Add Carss</a>
+<a href="/jobs/findQty" class="btn btn-light">Find Quantity</a>
+<a href="/jobs/update" class="btn btn-light">Update Quantity</a>
+<a href="/jobs/success" class="btn btn-light">Success Purchases</a>
+<a href="/jobs/searchJob" class="btn btn-light">Search By Car Name</a>
+<% } else { %>
+    <h1>Login</h1><br>
+    <a href="/login">Login</a> | <a href="/signup">Signup</a>
+    <% } %>
+
+
+        <!--SCRIPTS-->
+        <script src="/dependencies/sails.io.js"></script>
+        <!--SCRIPTS END-->

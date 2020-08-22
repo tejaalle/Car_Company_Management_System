@@ -1,0 +1,27 @@
+<body>
+    <ol class="breadcrumb">
+        <%if(data){%>
+            <label class="error text-danger">" Part already exists in available Car Parts"</label>
+            <%}%>
+    </ol>
+    <h1> Enter your manufactured part </h1>
+    <form action="/addData" method="POST">
+        <div class="form-group">
+            <label for="partId05">Car Part Id</label>
+            <input type="number", min="1", name="partId05" , placeholder="Enter Car Part Id" , class="form-control",  required>
+        </div>
+       <div class="form-group">
+            <label for="partName05">Car Part Name</label>
+            <input type="text" , name="partName05" , placeholder="Enter Car Part Name" , class="form-control", required>
+        </div>
+        <div class="form-group">
+            <label for="qoh05">Avilable Stock</label>
+            <input type="number" , min="1", name="qoh05" , placeholder="Enter Available Stock" , class="form-control", required>
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-primary"> Submit </button>
+        </div>
+    </form>
+    <br>
+  

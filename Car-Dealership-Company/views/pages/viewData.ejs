@@ -1,0 +1,21 @@
+<h1 class="display-4">Cars</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Car Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% data05.forEach(function(jobName05){ %>
+    <tr>
+      <td><%= jobName05 %></td>
+      <td>
+        <a href="/viewParts05/<%= jobName05 %>" class="btn btn-primary"
+          >Select</a
+        >
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>

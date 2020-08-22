@@ -1,0 +1,27 @@
+<h1 class="display-4">Transaction Details</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Part Id</th>
+      <th>Car Name</th>
+      <th>User Id</th>
+      <th>Quantity</th>
+      <th>Date Time</th>
+      <th>Results</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% data05.forEach(function(x){ %>
+    <tr>
+      <td><%= x.partId %></td>
+      <td><%= x.carName %></td>
+      <td><%= x.userId %></td>
+      <td><%= x.qty %></td>
+      <td><%= x.dateTime %></td>
+      <td>
+        <% if(x.result === true){ %> Success <% } else{ %> Failure <% } %>
+      </td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>

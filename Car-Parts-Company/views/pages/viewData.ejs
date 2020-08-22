@@ -1,0 +1,30 @@
+   <body>
+    <h1>Car Parts Data </h1>
+    <br>
+    <table class="table table-striped">
+    <thead>
+    <tr>
+    <th> Car Part Id </th>
+    <th> Car Part Name </th>
+    <th> Available Stock </th>
+    </tr>
+    </thead>
+    <tbody>
+    <% parts05.forEach(function(part){ %>
+    <tr>
+    <td> <%= part.partId05%> </td>
+    <td> <%= part.partName05 %> </td>
+    <td> <%= part.qoh05 %> </td>
+    <td>
+        <form class="d-inline" action="/updateData" method="POST">
+            <input type="hidden" name="partId05" value="<%= part.partId05 %>"></input>
+                        <input type="hidden" name="partName05" value="<%= part.partName05 %>"></input>
+            <input type="submit" value="Update Available Stock" class="btn btn-primary">
+        </form>
+    </td>
+    </tr>
+    <% }) %>
+    </tbody>
+    </table>
+   </body>
+   <br>

@@ -1,0 +1,27 @@
+  <body>
+    <h1>Successful Purchases </h1>
+    <br>
+    <table class="table table-striped">
+    <thread>
+    <tr>
+    <th> Car Name </th>
+    <th> User Id </th>   
+    <th> Car Part Id </th>
+    <th> Stock Needed </th>
+    <th>Transaction Id</th>
+    </tr>
+    </thread>
+    <tbody>
+    <% parts05.forEach(function(part){ %>
+    <tr>
+    <td> <%= part.jobName05 %> </td>
+    <td> <%= part.userId05%> </td>
+    <td> <%= part.partId05%> </td>
+    <td> <%= part.qty %> </td>
+    <td> <%= part.transactionId05%></td>
+    </tr>
+    <% }) %>
+    </tbody>
+    </table>
+   </body>
+   <br>

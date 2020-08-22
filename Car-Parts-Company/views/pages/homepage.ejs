@@ -1,0 +1,51 @@
+
+  <h1 class="display-4"> Welcome <h1>
+  <h2 class="mb-4"> This is Car parts Manager Company </h2>
+ 
+  <a class="notification" href="/request">
+    <span>Requests</span>
+    <span class="badge">  
+      <span id="demo"> <%= count05%></span>      
+  </a>
+
+  <form action="/viewData">
+  <button> Available Car Parts </button>
+  </form>
+  <br>
+  <form action="/addData">
+  <button> Add Car Parts </button>
+  </form>
+  <br>
+  <form action="/viewAllUserData">
+    <button> Success Purchases </button>
+    </form>
+    <br>
+  <form action="/userData">
+    <button>Success Purchases by car name </button>
+    </form>
+    <style>
+      .notification {
+  background-color: rgb(90, 13, 233);
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  float: right;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.notification:hover {
+  background: red;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+    </style>

@@ -1,0 +1,34 @@
+<h1 class="display-4">Cars</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Car Name</th>
+            <th>Car Part Id</th>
+            <th>Required Qty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% jobs.forEach(function(job){%>
+            <tr>
+                <td><%=job.jobName05%></td>
+                <td><%=job.partId05%></td>
+                <td><%=job.qty05%></td>
+                <td>
+                    <form class="d-inline" action="/jobs/delete" method="POST">
+                        <input type="hidden" name="jobName05" value="<%=job.jobName05%>"></input>
+                        <input type="hidden" name="partId05" value="<%=job.partId05%>"></input>
+                      <input type = "submit" value = "Delete" class="btn btn-danger">
+                    </form>
+                </td>
+                <td>
+                    <form class="d-inline" action="/jobs/edit" method="POST">
+                        <input type="hidden" name="jobName05" value="<%=job.jobName05%>"></input>
+                        <input type="hidden" name="partId05" value="<%=job.partId05%>"></input>
+                      <input type = "submit" value = "Edit" class="btn btn-primary">
+                    </form>
+                </td>
+            </tr>
+
+       <% })%>
+    </tbody>
+</table>

@@ -1,0 +1,96 @@
+<h1>Login</h1>
+<!-- <form method="POST" action="/login">
+  <input type="text" name="username" placeholder="Username" />
+  <input type="password" name="password" placeholder="Password" />
+  <input type="submit" value="submit" />
+</form> -->
+
+<!-- <h1><%= data05 %></h1> -->
+
+<form method="POST" action="/login">
+  <div class="form-group" hidden>
+    <label for="partId05">part id</label>
+    <input
+      type="number"
+      value="<%= data05[0] %>"
+      name="partId05"
+      class="form-control"
+      placeholder="User Name"
+    />
+  </div>
+  <div class="form-group" hidden>
+    <label for="partName05">Part Name</label>
+    <input
+      type="text"
+      value="<%= data05[1] %>"
+      name="partName05"
+      class="form-control"
+      placeholder="User Name"
+    />
+  </div>
+  <div class="form-group" hidden>
+    <label for="qty05">qty05</label>
+    <input
+      type="number"
+      value="<%= data05[2] %>"
+      name="qty05"
+      class="form-control"
+      required
+      placeholder="User Name"
+    />
+  </div>
+  <div class="form-group" hidden>
+    <label for="jobName05">qty05</label>
+    <input
+      type="text"
+      value="<%= data05[3] %>"
+      name="jobName05"
+      class="form-control"
+      required
+      placeholder="User Name"
+    />
+  </div>
+  <div class="form-group" hidden>
+    <label for="capacity05">Capacity</label>
+    <input
+      type="number"
+      value="<%= data05[4] %>"
+      name="capacity05"
+      class="form-control"
+      required
+      placeholder="User Name"
+    />
+  </div>
+  <div class="form-group" hidden>
+    <label for="orderType05">Order Type</label>
+    <input
+      type="text"
+      value="<%= data05[5] %>"
+      name="orderType05"
+      class="form-control"
+      required
+      placeholder="User Name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="userName05">Username</label>
+    <input
+      type="text"
+      name="userName05"
+      class="form-control"
+      required
+      placeholder="User Name"
+    />
+  </div>
+  <div class="form-group">
+    <label for="password05">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      required
+      name="password05"
+      placeholder="Password"
+    />
+  </div>
+  <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+</form>
